@@ -13,12 +13,12 @@ jobs:
       with:
         aws-access-key-id: ${{ AWS_ACCESS_KEY_ID }}
         aws-secret-access-key: ${{ AWS_SECRET_ACCESS_KEY }}
-        aws-region: global # Use your bucket region here
+        aws-region: us-east-1 # Use your bucket region here
         
     # Here you could add some building steps if you were dealing with some angular/react/Vue...
     # - name: Build static site
     #  run: yarn install && npm run-script build
     
     - name: Deploy static site to S3 bucket
-      run: aws s3 sync ./thefoldertodeploy/ s3://yourbucket.com --delete
+      run: aws s3 sync ./capstoneBadBank/ s3://capstonebadbank --delete
       # --delete flag will remove any file in the s3 that are not on the "thefoldertodeploy" folder
