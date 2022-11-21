@@ -86,3 +86,4 @@ function update(email, amount) {
     });
 }
 module.exports = {create, findOne, find, update, all };
+
