@@ -27,7 +27,7 @@ function Login(props){
       <button type="submit" 
         className="btn btn-light" 
         onClick={() => props.setShow(true)}>
-          Authenticate again
+          Logout
       </button>
     </>);
   }
